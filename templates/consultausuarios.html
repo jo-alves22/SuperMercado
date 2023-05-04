@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta usuários - Supermercado PagueMais</title>
+</head>
+<body>
+    <table>
+		<tr>
+			<th>Codigo</th>
+			<th>Nome</th>
+		</tr>
+		{% for linha in dados %}
+		<tr>
+			<td>{{ linha[0] }}</td>
+			<td>{{ linha[1] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+    <div class="Home">
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</body>
+</html>
