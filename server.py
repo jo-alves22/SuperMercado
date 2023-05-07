@@ -181,8 +181,8 @@ def consultausuarios():
     conexao.close()
     return render_template('consultausuarios.html', dados=resultado)
 
-@app.route('/consultaprodutos')
-def consultaprodutos():
+@app.route('/listaprodutos')
+def listaprodutos():
     conexao = mysql.connector.connect(
         host = "localhost",
         user = "root",
@@ -199,7 +199,7 @@ def consultaprodutos():
     cursor.close()
 
     conexao.close()
-    return render_template('consultaprodutos.html', dados=resultado)
+    return render_template('listaprodutos.html', dados=resultado)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
